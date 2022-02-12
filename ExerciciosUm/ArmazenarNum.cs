@@ -1,6 +1,7 @@
 using System;				
 public class Program
 {
+	// 3) Crie um programa que leia 10 valores double e salve em um array, depois imprima esses valores. 
 	public static void Main()
 	{
 		int i = 0;

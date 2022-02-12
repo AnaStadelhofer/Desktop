@@ -1,6 +1,7 @@
 using System;
 public class Program
 {
+     //1) Crie um programa que questione a quantidade de notas a ser informada, receba as notas e calcule a média.
 	public static void Main()
 	{
 		int Quantidade = 0;

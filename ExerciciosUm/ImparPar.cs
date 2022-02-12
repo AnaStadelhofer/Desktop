@@ -2,6 +2,7 @@ using System;
 					
 public class Program
 {
+	// //4) Crie um programa que leia 10 valores int e salve em um array, depois imprima se esses valores são pares ou ímpares. 
 	public static void Main()
 	{
 		int i = 0;
