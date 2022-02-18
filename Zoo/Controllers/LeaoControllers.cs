@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using Models;
+using Menu;
 
 namespace Controllers
 {
     public class LeaoControllers
     {
         List<Leao> Leoes = new List<Leao>();
-        
         public static void UpdateLeao()
         {
             Console.WriteLine("Atualizar Leão!");
@@ -16,7 +16,6 @@ namespace Controllers
         public static void InsertLeao()
         {
             Console.WriteLine("Cadastrar Leão!");   
-            //Leoes.Add(new Leao(Id, Name, Visit, Aliment));
         }
 
         public static void DeleteLeao()
@@ -28,5 +27,15 @@ namespace Controllers
         {
             Console.WriteLine("Selecionar Leão!");
         }
+
+        public static void SelectLeaoEspec()
+        {
+            Console.WriteLine("Selecionar Leão Especifico!");
+        }
+
     }
 }
+
+/*
+Animal foo = from animal in animais where animal.idAnimal = id;
+*/
