@@ -193,7 +193,7 @@ namespace Menu
 						}
 						break;
 					default:
-						Console.WriteLine("\n Escolha inválida!");
+						Console.WriteLine("\n Adeus!");
 						break;
 				}
 			} 
