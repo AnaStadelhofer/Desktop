@@ -33,11 +33,11 @@ namespace Controllers
 
         public static void DeleteLeao(int Id)
         {
-            Console.WriteLine("Deletar Leão!");
             Console.WriteLine("\n Informe o id: ");
 			try
             {
 			    Leao.Leoes.RemoveAt(Id);
+                Console.WriteLine("\n Leão deletado! ");
             }
             catch(Exception)
             {
@@ -73,7 +73,3 @@ namespace Controllers
 
     }
 }
-
-/*
-IEnumerable<Leao> foo = from leao in Leoes where leao.IdAnimal = Id select leao;
-*/

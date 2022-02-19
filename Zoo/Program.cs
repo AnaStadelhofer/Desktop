@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Models;
 using Controllers;
+using Views;
 
 namespace Menu
 {
@@ -36,121 +37,31 @@ namespace Menu
 				{
 					case 1:
 					// CADASTRAR LEÃO
-						Console.WriteLine("\n Cadastrar Leão");
-						Console.WriteLine("\n Informe o Id: ");
 						try
 						{
-							Id = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Id inválido!");
-						}
-						Console.WriteLine("\n Informe o nome: ");
-						try
-						{
-							Name = Console.ReadLine();
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Nome inválido!");
-						}
-						
-						Console.WriteLine("\n Informe a quantidade de visita: ");
-						try
-						{
-							Visit = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Visita inválida!");
-						}
-						
-						Console.WriteLine("\n Informe a quantidade de alimento: ");
-						try
-						{
-							Aliment = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Tempo de Alimento inválido!");
-						}
-						try
-						{
-							LeaoControllers.InsertLeao(Id, Name, Visit, Aliment);
+							LeaoViews.InsertLeonView();
 						}
 						catch(Exception)
 						{
 							Console.WriteLine("\n Erro no metodo para cadastrar Leão");
 						}
 						break;
-
 					case 2:
 					// DELETAR LEAO
-						Console.WriteLine("\n Deletar Leão");
-						Console.WriteLine("\n Informe o id: ");
 						try
 						{
-							Id = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Id informado é inválido!");
-						}
-						try
-						{
-							LeaoControllers.DeleteLeao(Id);
+							LeaoViews.DeleteLeonView();
 						}
 						catch(Exception)
 						{
 							Console.WriteLine("\n Erro no metodo para deletar Leão");
 						}
 						break;
-
 					case 3:
 					// Atualizar Leão
-						Console.WriteLine("\n Atualizar Leão");
-						Console.WriteLine("\n Informe o Id do Leão");
 						try
 						{
-							Id = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Id inválido");
-						}
-						Console.WriteLine("\n Informe o nome: ");
-						try
-						{
-							Name = Console.ReadLine();
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Nome inválido!");
-						}
-						
-						Console.WriteLine("\n Informe a quantidade de visita: ");
-						try
-						{
-							Visit = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Visita inválido!");
-						}
-						
-						Console.WriteLine("\n Informe a quantidade de alimento: ");
-						try
-						{
-							Aliment = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Tempo de Alimento inválido!");
-						}
-						try
-						{
-							LeaoControllers.UpdateLeao(Id, Name, Visit, Aliment);
+							LeaoViews.UpdateLeonView();
 						}
 						catch(Exception)
 						{
@@ -160,10 +71,9 @@ namespace Menu
 
 					case 4:
 					// SELECIONAR TODOS LEÕES
-						Console.WriteLine("\n Selecionar todos Leões");
 						try
 						{
-							LeaoControllers.SelectLeao();
+							LeaoViews.SelectAllLeonView();
 						}
 						catch(Exception)
 						{
@@ -171,21 +81,10 @@ namespace Menu
 						}
 						break;
 					case 5:
-
 					// SELECT UM LEAO
-						Console.WriteLine("\n Selecionar Leão Especifico");
-						Console.WriteLine("\n Informe o Id: ");
 						try
 						{
-							Id = Convert.ToInt32(Console.ReadLine());
-						}
-						catch(Exception)
-						{
-							Console.WriteLine("\n Id inválido!");
-						}
-						try
-						{
-							LeaoControllers.SelectLeaoEspec(Id);
+							LeaoViews.SelectOneLeonView();
 						}
 						catch(Exception)
 						{
