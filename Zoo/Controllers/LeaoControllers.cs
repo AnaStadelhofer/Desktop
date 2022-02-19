@@ -55,10 +55,10 @@ namespace Controllers
 
         public static void SelectLeaoEspec(int Id)
         {
-            IEnumerable<Leao> foo = from Leao in Leao.Leoes where Leao.IdAnimal == 1 select Leao;
+            IEnumerable<Leao> foo = from Leao in Leao.Leoes where Leao.IdAnimal == Id select Leao;
             Leao leao = Leao.Leoes.Find(leao => leao.IdAnimal == Id);
 
-            Leao.Leoes.Where(leao => leao.IdAnimal == 1).First();
+            Leao.Leoes.Where(leao => leao.IdAnimal == Id).First();
 
             foreach(Leao Leoes in foo)
             {
